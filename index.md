@@ -9,11 +9,19 @@ manual and automatic transmissions.
 
 ```r
 library(ggplot2)
+```
+
+```
+## Use suppressPackageStartupMessages() to eliminate package startup
+## messages.
+```
+
+```r
 data(mtcars)
 ```
 
 The column corresponding to the transmission type is `am`. We convert
-its type from a `double` to a `factor`.
+its type from a `double` to a [@rhelp, `factor`].
 
 
 ```r

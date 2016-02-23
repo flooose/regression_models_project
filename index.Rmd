@@ -7,19 +7,14 @@ output:
     keep_md: yes
     mathjax: default
 references:
-- id: openintro
-  title: OpenIntro Statistics
+- id: rhelp
+  title: 'R: A Language and Environment for Statistical Computing'
   author:
-  - family: Diez
-    given: David M
-  - family: Barr
-    given: Christopher D
-  - family: Çetinkaya-Rundel
-    given: Mine
-  URL: 'https://www.openintro.org/'
+  - family: The R Core Team
+  URL: 'https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf'
   issued:
     year: 2015
-    month: 9
+    month: 12
 
 ---
 
@@ -34,7 +29,7 @@ data(mtcars)
 ```
 
 The column corresponding to the transmission type is `am`. We convert
-its type from a `double` to a `factor`.
+its type from a `double` to a [@rhelp, `factor`].
 
 ```{R, cache=T}
 summary(mtcars)
