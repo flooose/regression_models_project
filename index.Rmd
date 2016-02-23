@@ -1,0 +1,49 @@
+---
+title: "Comparing Automatic to Manual Transmissions"
+author: Christopher Floess
+output:
+  pdf_document: default
+  html_document:
+    keep_md: yes
+    mathjax: default
+references:
+- id: openintro
+  title: OpenIntro Statistics
+  author:
+  - family: Diez
+    given: David M
+  - family: Barr
+    given: Christopher D
+  - family: Çetinkaya-Rundel
+    given: Mine
+  URL: 'https://www.openintro.org/'
+  issued:
+    year: 2015
+    month: 9
+
+---
+
+In this publication I will look at the `mtcars` data set and compare
+manual and automatic transmissions.
+
+## Examining the Data
+
+```{R, cache=T}
+library(ggplot2)
+data(mtcars)
+```
+
+The column corresponding to the transmission type is `am`. We convert
+its type from a `double` to a `factor`.
+
+```{R, cache=T}
+summary(mtcars)
+typeof(mtcars$am)
+mtcars$automaticTransmission <- as.factor(mtcars$am)
+```
+
+```{R, cache=T}
+g <- ggplot(data=mtcars)
+g <- g + geom_point() + aes(x=automaticTransmission, y=mpg)
+g
+```
